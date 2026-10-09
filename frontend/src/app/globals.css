@@ -141,3 +141,12 @@ mark { background: #FFE88A; color: inherit; border-radius: 3px; padding: 0 1px; 
   .detail { height: auto; } .detail-cols { grid-template-columns: 1fr; } .col.right { height: 80vh; order: -1; } .col.left { border-right: 0; }
   .row2 { grid-template-columns: 1fr; }
 }
+
+
+.int-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin-top: 16px; }
+.int-card { border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; display: flex; flex-direction: column; gap: 6px; background: #fff; }
+.int-card:hover { border-color: #d9d0fb; background: var(--surface); }
+.int-card p { margin: 0 0 8px; flex: 1; }
+.int-card .btn { align-self: flex-start; }
+.int-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.int-icon { width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--border); background: #fff; display: grid; place-items: center; }
