@@ -131,7 +131,9 @@ export default function AppsPage() {
 
       {shown.length === 0 ? (
         <div className="empty">
-          <p>No AI Apps match "{q}".</p>
+          <p>
+            No AI Apps match &quot;{q}&quot;.
+          </p>
         </div>
       ) : (
         <div className="apps-grid">

@@ -117,7 +117,7 @@ export default function TeamPage() {
         {members.length === 0 ? (
           <div className="empty team-empty">
             <FiUsers size={28} />
-            <p>No team members match "{query}".</p>
+            <p>No team members match &quot;{query}&quot;.</p>
           </div>
         ) : (
           <div className="member-list">
