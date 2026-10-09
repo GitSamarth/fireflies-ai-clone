@@ -7,8 +7,9 @@ import { useToast } from "./Toast";
 
 const NAV = [
   { href: "/", label: "Meetings", icon: "▤" },
-  { href: "/apps", label: "AI Apps", icon: "✦" },
   { href: "/integrations", label: "Integrations", icon: "⇄" },
+  { href: "/apps", label: "AI Apps", icon: "✦" },
+  { href: "/voice-agents", label: "Voice Agents", icon: "🎙", isNew: true },
   { href: "/team", label: "Team", icon: "☺" },
   { href: "/settings", label: "Settings", icon: "⚙" },
 ];
@@ -28,8 +29,12 @@ export default function Shell({ children }: { children: React.ReactNode }) {
           {NAV.map((n) => (
             <Link key={n.href} href={n.href} className={active(n.href) ? "nav on" : "nav"} aria-current={active(n.href) ? "page" : undefined}>
               <span className="ico">{n.icon}</span>{n.label}
+              {n.isNew && <span className="nav-new-badge">New</span>}
             </Link>
           ))}
+          <button className="nav" onClick={() => toast("Coming soon!", "info")}>
+            <span className="ico">•••</span>More...
+          </button>
         </nav>
       </aside>
       <div className="main">
