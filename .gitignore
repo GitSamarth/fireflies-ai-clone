@@ -8,6 +8,5 @@ __pycache__/
 !.env.example
 .pytest_cache/
 
-# Internal QA artifacts
-QA_REPORT.md
-docs/qa/
+# Private interview prep / QA files
+docs/
